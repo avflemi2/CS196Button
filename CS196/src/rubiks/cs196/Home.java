@@ -11,6 +11,7 @@ import android.widget.GridLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 import android.appwidget.*;
+import android.content.Intent;
 
 
 public class Home extends Activity {
@@ -24,6 +25,20 @@ public class Home extends Activity {
 		rel.setBackgroundColor(Color.BLACK);
 		
 		final Button button1 = (Button) findViewById(R.id.button1);
+		
+		Button next = (Button) findViewById(R.id.next);
+		
+		next.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				
+				Intent intent = new Intent(getApplicationContext(), FaceTwo.class);
+				startActivity(intent);
+				
+			}
+		});
 		
 		
 		final Button buttonR = (Button) findViewById(R.id.buttonred);
